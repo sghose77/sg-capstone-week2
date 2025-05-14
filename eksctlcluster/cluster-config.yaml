@@ -16,12 +16,12 @@ iam:
 
   serviceAccounts:
   - metadata:
-      name: cluster-autoscaler-<initials>
+      name: cluster-autoscaler-week2-sg
       namespace: kube-system
     wellKnownPolicies:
       autoScaler: true
   - metadata:
-      name: aws-load-balancer-controller-<initials>
+      name: aws-load-balancer-controller-week2-sg
       namespace: kube-system
     wellKnownPolicies:
       awsLoadBalancerController: true

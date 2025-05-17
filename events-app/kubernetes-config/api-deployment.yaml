@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: events-api
+  name: events-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: events-api
+      ver: v1.0
+  template:
+    metadata:
+      labels:
+        app: events-api
+        ver: v1.0
+    spec:
+      containers:
+      - image: 571486265604.dkr.ecr.us-east-1.amazonaws.com/sg-capstone-week2/events-api:v3.0
+        name: events-api
+        ports:
+        - containerPort: 8082

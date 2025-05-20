@@ -17,7 +17,10 @@ spec:
         ver: v1.0
     spec:
       containers:
-      - image: 571486265604.dkr.ecr.us-east-1.amazonaws.com/sg-capstone-week2/events-website@sha256:a662478504f37825dffb511576254bb66e16e71c3426d3cbddf752af65e9457f
+      - image: 571486265604.dkr.ecr.us-east-1.amazonaws.com/sg-capstone-week2/events-website:latest
         name: events-web
         ports:
         - containerPort: 8080
+        env:
+        - name: SERVER
+          value: "http://events-api-svc:8082"
